@@ -18,7 +18,7 @@ public class DbQuerys {
 			Statement statement = conn.createStatement();
 			ResultSet resultSet = statement.executeQuery(query);
 			while(resultSet.next()) {
-				resultList.add(resultSet.getString(6));
+				resultList.add(resultSet.getString(2));
 			}
 			
 		}catch(SQLException e) {
