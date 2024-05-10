@@ -32,7 +32,7 @@ public class SeleniumLocators extends BaseTest{
 	 * near
 	 * 
 	 */
-	@Test(priority=1)
+	@Test(priority=2)
 	public void tagNameLocator() {
 		
 		WebElement discoverText = driver.findElement(By.tagName("em"));	
@@ -41,7 +41,7 @@ public class SeleniumLocators extends BaseTest{
 		assertEquals(text, "Discover");
 		
 	}
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void linkTextLocator() {
 		
 		driver.findElement(By.linkText("BOOKS")).click();
@@ -49,7 +49,7 @@ public class SeleniumLocators extends BaseTest{
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/");
 		
 	}
-	@Test(priority= 3)
+	@Test(priority= 4)
 	public void partialLinkTextLocator() {
 		
 		driver.findElement(By.partialLinkText("Healthy")).click();
@@ -57,7 +57,7 @@ public class SeleniumLocators extends BaseTest{
 		WebElement booksCatergory = driver.findElement(By.linkText("Cookbooks"));	
 		assertTrue(booksCatergory.isDisplayed());
 	}
-	@Test(priority=4)
+	@Test(priority=5)
 	public void classNameLocator() {
 		
 		WebElement price = driver.findElement(By.className("price"));
