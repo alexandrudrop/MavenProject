@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import selenium.utils.BaseTest;
@@ -68,6 +69,8 @@ public class SeleniumLocators extends BaseTest{
 	@Test(priority=5)
 	public void idLocator() {
 		
+		Actions action = new Actions(driver);
+		action.scrollByAmount(0, 500).perform();
 		WebElement reviewTab = driver.findElement(By.id("tab-title-reviews"));
 		reviewTab.click();
 		WebElement commentBox = driver.findElement(By.id("comment"));
