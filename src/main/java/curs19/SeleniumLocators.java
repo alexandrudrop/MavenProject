@@ -32,7 +32,7 @@ public class SeleniumLocators extends BaseTest{
 	 * near
 	 * 
 	 */
-	@Test(priority=2)
+	@Test(priority=1)
 	public void tagNameLocator() {
 		
 		WebElement discoverText = driver.findElement(By.tagName("em"));	
@@ -41,7 +41,7 @@ public class SeleniumLocators extends BaseTest{
 		assertEquals(text, "Discover");
 		
 	}
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void linkTextLocator() {
 		
 		driver.findElement(By.linkText("BOOKS")).click();
@@ -49,7 +49,7 @@ public class SeleniumLocators extends BaseTest{
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/");
 		
 	}
-	@Test(priority= 4)
+	@Test(priority= 3)
 	public void partialLinkTextLocator() {
 		
 		driver.findElement(By.partialLinkText("Healthy")).click();
@@ -57,13 +57,37 @@ public class SeleniumLocators extends BaseTest{
 		WebElement booksCatergory = driver.findElement(By.linkText("Cookbooks"));	
 		assertTrue(booksCatergory.isDisplayed());
 	}
-	@Test(priority=5)
+	@Test(priority=4)
 	public void classNameLocator() {
 		
 		WebElement price = driver.findElement(By.className("price"));
 		System.out.println(price.getText());
-		assertTrue(price.getText().contains("18.50"));
+		assertTrue(price.getText().contains("18.49"));
 		
 	}
-	
+	@Test(priority=5)
+	public void idLocator() {
+		
+		WebElement reviewTab = driver.findElement(By.id("tab-title-reviews"));
+		reviewTab.click();
+		WebElement commentBox = driver.findElement(By.id("comment"));
+		assertTrue(commentBox.isDisplayed());
+	}
+	@Test(priority=6)
+	public void nameLocator() throws InterruptedException {
+		
+		WebElement commentBox = driver.findElement(By.name("comment"));
+		commentBox.sendKeys("Super mesaj!");
+		Thread.sleep(3000);
+		commentBox.clear(); // sterge valoarea prezenta intr-un input sau textarea field
+		commentBox.sendKeys("Alt super mesaj!");
+	}
+	@Test(priority=7)
+	public void cssSelectorLocator() {
+		driver.findElement(By.cssSelector("input[id='author']")).sendKeys("John Doe");
+	}
+	@Test(priority=8)
+	public void xpatxLocator() {
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
+	}
 }
