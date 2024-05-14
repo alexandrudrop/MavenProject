@@ -19,7 +19,7 @@ public class FindTheBook extends BaseTest{
 		
 		List<WebElement> menuElements = driver.findElements(By.cssSelector("li[class='sc_tabs_title']"));
 		
-        String[] categories = {"New Releases", "Coming Soon", "Best Seller", "Award Winner"};
+     //   String[] categories = {"New Releases", "Coming Soon", "Best Seller", "Award Winner"};
 		
         for (int i = 0; i < menuElements.size(); i++) {
             WebElement menuElement = menuElements.get(i);
