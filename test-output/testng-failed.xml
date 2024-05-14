@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="curs20.FindElementsExample">
+      <class name="curs20.tema.FindTheBook">
         <methods>
-          <include name="testFindElements"/>
+          <include name="testFindTheBook"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- curs20.FindElementsExample -->
+      </class> <!-- curs20.tema.FindTheBook -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
