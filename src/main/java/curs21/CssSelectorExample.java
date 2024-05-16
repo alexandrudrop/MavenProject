@@ -37,7 +37,7 @@ public class CssSelectorExample extends BaseTest{
 		driver.findElement(By.cssSelector("li[class='menu_user_login']")).click();
 		
 		//AND
-		driver.findElement(By.cssSelector("input[name='log'][placeholder='Login or Email'")).sendKeys("Test");
+		driver.findElement(By.cssSelector("input[name='log'][placeholder='Login or Email']")).sendKeys("Test");
 		
 		//OR
 		driver.findElement(By.cssSelector("input[type='password'],[name='pwd']")).sendKeys("Test");

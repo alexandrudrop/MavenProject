@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-15T22:12:51 EEST" name="Default suite" finished-at="2024-05-15T22:13:01 EEST" duration-ms="9118">
+  <suite started-at="2024-05-16T21:41:37 EEST" name="Default suite" finished-at="2024-05-16T21:41:49 EEST" duration-ms="11738">
     <groups>
     </groups>
-    <test started-at="2024-05-15T22:12:51 EEST" name="Default test" finished-at="2024-05-15T22:13:01 EEST" duration-ms="9118">
-      <class name="curs20.tema.FindTheBook">
-        <test-method is-config="true" signature="setup()[pri:0, instance:curs20.tema.FindTheBook@5fdcaa40]" started-at="2024-05-15T22:12:51 EEST" name="setup" finished-at="2024-05-15T22:12:54 EEST" duration-ms="3016" status="PASS">
+    <test started-at="2024-05-16T21:41:37 EEST" name="Default test" finished-at="2024-05-16T21:41:49 EEST" duration-ms="11738">
+      <class name="curs21.tema.SendMessage">
+        <test-method is-config="true" signature="setup()[pri:0, instance:curs21.tema.SendMessage@5fdcaa40]" started-at="2024-05-16T21:41:37 EEST" name="setup" finished-at="2024-05-16T21:41:39 EEST" duration-ms="1696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testFindTheBook()[pri:0, instance:curs20.tema.FindTheBook@5fdcaa40]" started-at="2024-05-15T22:12:54 EEST" name="testFindTheBook" finished-at="2024-05-15T22:12:55 EEST" duration-ms="968" status="PASS">
+        <test-method signature="testSendMessage()[pri:0, instance:curs21.tema.SendMessage@5fdcaa40]" started-at="2024-05-16T21:41:39 EEST" name="testSendMessage" finished-at="2024-05-16T21:41:44 EEST" duration-ms="4902" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFindTheBook -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:curs20.tema.FindTheBook@5fdcaa40]" started-at="2024-05-15T22:12:55 EEST" name="tearDown" finished-at="2024-05-15T22:13:01 EEST" duration-ms="5115" status="PASS">
+        </test-method> <!-- testSendMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:curs21.tema.SendMessage@5fdcaa40]" started-at="2024-05-16T21:41:44 EEST" name="tearDown" finished-at="2024-05-16T21:41:49 EEST" duration-ms="5121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- curs20.tema.FindTheBook -->
+      </class> <!-- curs21.tema.SendMessage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
