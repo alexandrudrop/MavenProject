@@ -31,6 +31,7 @@ public class CssSelectorExample extends BaseTest{
 		 * ul[id="menu_user"]
 		 * #menu_user e acelasi lucru cu [id="menu_user"]
 		 * ul#menu_user e acelasi lucru cu ul[id="menu_user"]
+		 * 
 		 */
 	
 		
@@ -64,6 +65,8 @@ public class CssSelectorExample extends BaseTest{
 		//~ --> contains word
 		WebElement book4 = driver.findElement(By.cssSelector("a[href~='the-forest']"));
 		System.out.println(book4.getText());
+		
+		//test pt git
 	}
 
 }
