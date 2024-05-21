@@ -90,7 +90,7 @@ public class SeleniumLocators extends BaseTest{
 		driver.findElement(By.cssSelector("input[id='author']")).sendKeys("John Doe");
 	}
 	@Test(priority=8)
-	public void xpatxLocator() {
+	public void xpathLocator() {
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
 	}
 }
