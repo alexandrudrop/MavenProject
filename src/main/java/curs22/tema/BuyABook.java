@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -21,22 +22,27 @@ public class BuyABook extends BaseTest{
 		Thread.sleep(700);
 		driver.findElement(By.cssSelector("a[class*='post_more']")).click();
 		
-		driver.findElement(By.id("viewmore_link")).click();
-		Thread.sleep(700);
-		
-		Actions action = new Actions(driver);
-		action.scrollByAmount(0, 1200).perform();
-		
-		driver.findElement(By.id("viewmore_link")).click();
-		Thread.sleep(1000);
-		
-		Actions action2 = new Actions(driver);
-		action2.scrollByAmount(0, 900).perform();
-		
-		driver.findElement(By.cssSelector("a[href='https://keybooks.ro/shop/the-story-about-me/']")).click();
-		driver.getCurrentUrl();
-		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/the-story-about-me/"); 
-		
+        WebElement loadMore = driver.findElement(By.id("viewmore_link")); 
+
+        while(loadMore.isDisplayed()) {  
+        	Thread.sleep(2000);
+        	Actions action = new Actions(driver);
+        	action.scrollToElement(loadMore).perform();
+        	loadMore.click();
+        	try{
+        		WebElement theStoryAboutMeBook = driver.findElement(By.cssSelector("article>h4>a[href*='the-story-about-me/']"));
+        		action.scrollToElement(theStoryAboutMeBook).perform();
+        		break;
+        		}catch (NoSuchElementException e){
+        			
+        		}
+        	}
+        
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("article>h4>a[href*='the-story-about-me/']")).click();
+        driver.getCurrentUrl();
+        assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/the-story-about-me/"); 
+
 		driver.findElement(By.cssSelector("button[name='add-to-cart']")).click();
         WebElement addedToCartMessage = driver.findElement(By.cssSelector("div[class='woocommerce-message']"));
 		assertTrue(addedToCartMessage.isDisplayed());
